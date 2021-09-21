@@ -28,7 +28,7 @@ go-twitter is a Go client library for the [Twitter API](https://dev.twitter.com/
 
 ## Install
 
-    go get github.com/dghubble/go-twitter/twitter
+    go get github.com/javiyt/go-twitter/twitter
 
 ## Documentation
 
