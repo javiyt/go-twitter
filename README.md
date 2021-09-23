@@ -1,4 +1,4 @@
-# go-twitter [![Build Status](https://github.com/dghubble/go-twitter/workflows/test/badge.svg)](https://github.com/dghubble/go-twitter/actions?query=workflow%3Atest+branch%3Amaster) [![GoDoc](https://godoc.org/github.com/dghubble/go-twitter?status.svg)](https://godoc.org/github.com/dghubble/go-twitter)
+# go-twitter [![test](https://github.com/javiyt/go-twitter/actions/workflows/test.yaml/badge.svg)](https://github.com/javiyt/go-twitter/actions/workflows/test.yaml) [![GoDoc](https://godoc.org/github.com/dghubble/go-twitter?status.svg)](https://godoc.org/github.com/dghubble/go-twitter)
 
 <img align="right" src="https://storage.googleapis.com/dghubble/gopher-on-bird.png">
 

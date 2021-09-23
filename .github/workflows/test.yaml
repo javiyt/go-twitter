@@ -28,7 +28,10 @@ jobs:
 
       - name: test
         run: make
-
+  versioning:
+    name: versioning
+    runs-on: ubuntu-latest
+    steps:
       - name: Bump version
         uses: remorses/bump-version@js
         with:
