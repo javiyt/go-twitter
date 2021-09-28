@@ -14,3 +14,4 @@ jobs:
           owner: dghubble
           base: master
           head: master
+          merge_method: squash
