@@ -9,9 +9,10 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: tgymnich/fork-sync@v1.4
+      - uses: tgymnich/fork-sync@v1.5
         with:
           owner: dghubble
           base: master
           head: master
           merge_method: squash
+          token: ${{ secrets.PERSONAL_TOKEN }}
