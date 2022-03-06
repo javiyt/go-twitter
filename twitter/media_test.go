@@ -39,26 +39,30 @@ func uploadResponseFunc(w http.ResponseWriter, r *http.Request) {
 		// 11 byte requests trigger the
 		if tb == "11" {
 			w.WriteHeader(http.StatusBadRequest)
+			_, _ = w.Write([]byte("bad request"))
 			return
 		}
+		_, _ = fmt.Fprintf(w, `{"media_id": %v, "media_id_string": "%v", "size": %v, "expires_after_secs": 86400}`, tb, tb, tb)
 		log.Printf("tb is %q", tb)
-		fmt.Fprintf(w, `{"media_id": %v, "media_id_string": "%v", "size": %v, "expires_after_secs": 86400}`, tb, tb, tb)
 	case "APPEND":
 		mid := r.FormValue("media_id")
 		if mid == "17" {
 			w.WriteHeader(http.StatusBadRequest)
+			_, _ = w.Write([]byte("bad request"))
 			return
 		}
 	case "FINALIZE":
 		mid := r.FormValue("media_id")
 		if mid == "23" {
 			w.WriteHeader(http.StatusBadRequest)
+			_, _ = w.Write([]byte("bad request"))
 			return
 		}
-		fmt.Fprintf(w, `{"media_id": %v, "media_id_string": "%v", "size": %v, "expires_after_secs": 86400}`, mid, mid, mid)
+		_, _ = fmt.Fprintf(w, `{"media_id": %v, "media_id_string": "%v", "size": %v, "expires_after_secs": 86400}`, mid, mid, mid)
 	default:
 		w.WriteHeader(http.StatusBadRequest)
-		fmt.Fprintf(w, `{"status":"bad"}`)
+		_, _ = w.Write([]byte("bad request"))
+		_, _ = fmt.Fprintf(w, `{"status":"bad"}`)
 	}
 }
 
@@ -138,9 +142,7 @@ func TestMediaService_Upload(t *testing.T) {
 		if err == nil {
 			assert.Equal(t, test.want, resp)
 		}
-
 	}
-
 }
 
 func TestMediaService_Status(t *testing.T) {

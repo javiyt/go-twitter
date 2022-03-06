@@ -117,7 +117,7 @@ func (m *MediaService) Upload(media []byte, mediaType string) (*MediaUploadResul
 
 	mediaID := res.MediaID
 
-	segments := int(len(media) / chunkSize)
+	segments := len(media) / chunkSize
 	for segment := 0; segment <= segments; segment++ {
 		start := segment * chunkSize
 		end := (segment + 1) * chunkSize
