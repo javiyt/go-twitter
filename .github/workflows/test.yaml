@@ -37,4 +37,5 @@ jobs:
         with:
             version_file: ./VERSION
             github_token: ${{ secrets.PERSONAL_TOKEN }}
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
