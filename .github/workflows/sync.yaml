@@ -9,7 +9,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: tgymnich/fork-sync@v1.8.0
+      - uses: tgymnich/fork-sync@v1.9.0
         with:
           owner: dghubble
           base: master
