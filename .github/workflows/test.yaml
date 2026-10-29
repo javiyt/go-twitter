@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v7
 
       - name: tools
-        run: go get golang.org/x/lint/golint
+        run: go install golang.org/x/lint/golint@latest
 
       - name: test
         run: make
